@@ -17,3 +17,16 @@ ssh_public_keys = [
   "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAhLzivPgJGOMkfj6Fg8WBbPvJIMLQHjpFTnXZVsncBg prakash2ji@gmail.com",
 ]
 
+# Infisical configuration
+# Secrets should be set via environment variables (TF_VAR_*) or .env file
+# Generate secrets with:
+#   openssl rand -hex 16          # for encryption_key
+#   openssl rand -base64 32       # for auth_secret
+#   openssl rand -base64 24       # for postgres_password
+infisical_postgres_db       = "infisical"
+infisical_postgres_user     = "infisical"
+infisical_site_url          = "https://192.168.20.22:8443"
+# infisical_postgres_password - set via TF_VAR_infisical_postgres_password
+# infisical_encryption_key    - set via TF_VAR_infisical_encryption_key
+# infisical_auth_secret       - set via TF_VAR_infisical_auth_secret
+pm_ssh_user = "root"
